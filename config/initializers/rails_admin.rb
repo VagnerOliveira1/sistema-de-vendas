@@ -30,7 +30,7 @@ RailsAdmin.config do |config|
   # config.show_gravatar true
 
   config.navigation_static_links = {
-    'OneBitCode' => 'http://onebitcode.com'
+    'Envixo' => 'https://envixo.com/'
   }
   config.navigation_static_label = "Lins Úteis"
 
@@ -68,6 +68,7 @@ RailsAdmin.config do |config|
   end
 
   config.model Client do
+
     create do
       field  :name
       field  :company_name
@@ -117,25 +118,42 @@ RailsAdmin.config do |config|
   end
 
 
+  config.model  Product do
+    navigation_icon 'fa  fa-product-hunt'
+  end
+  config.model User do
+    navigation_icon 'fa fa-users'
+  end
   config.model Discount do
+    navigation_icon 'fa fa-percent'
     parent Product
   end
+  
 
   config.model Sale do
+    navigation_icon 'fa fa-cart-plus'
     parent User
     weight -2
   end
 
   config.model Comission do
-    parent User
+    navigation_icon 'fa fa-percent'
+        parent User
     weight -1
   end
 
   config.model Client do
+   navigation_icon 'fa fa-users'
     parent User
   end
 
   config.model ProductQuantity do
+    field :sale_id, :hidden do
+      default_value do
+        bindings[:view]._current_user.id
+      end
+    end
+
     visible false
   end
 
@@ -148,6 +166,7 @@ RailsAdmin.config do |config|
     edit do
       field :product
       field :quantity
+      field :sale_id, :hidden 
 
       field :user_id, :hidden do
         default_value do

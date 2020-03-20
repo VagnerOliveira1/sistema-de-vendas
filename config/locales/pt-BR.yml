@@ -1,16 +1,82 @@
 pt-BR:
-  activerecord:
-    models:
-      client:
-        one: Cliente
-        other: Clientes
-    attributes:
-      client:
-        name: "Nome"
-        company_name: "Nome da Empresa"
-
-
-
+  # activerecord:
+  #   models:
+  #     user:
+  #       one: Usuário
+  #       other: Usuaários
+  #     # client:
+  #     #   one: Cliente
+  #     #   other: Clientes 
+      
+  #     sale:
+  #       one: Venda
+  #       other: Vendas
+  #     discount:
+  #       one: Desconto
+  #       other: Descontos
+  #     comission:
+  #       one: Comissão
+  #       other: Comissões
+  #     discount:
+  #       one: Desconto
+  #       other: Descontos
+  #     adrress:
+  #       one: Endereço
+  #       other: Endereços
+  #   attributes:
+  #     client:
+  #       name: Nome
+  #       company_name: Nome da Empresa
+  #       document: Documento
+  #       email: E-mail
+  #       phone: Telefone
+  #       notes: Notas
+  #       status: Status
+  #     user:
+  #       name: Nome
+  #       document: Documento
+  #       kind: Tipo
+  #       status: Status
+  #       notes: Notas
+  #       email: E-mail
+  #       created_at: Criado em
+  #       updated_at: Atualizado em
+  #     sale:
+  #       sale_date:  Data da Venda
+  #       notes: Notas
+  #       created_at: Criada em
+  #       updated_at: Atualizada em
+  #     product:
+  #       name: Nome
+  #       description: Descrição
+  #       status: Status
+  #       price: Preço
+  #       photo: Imagem
+  #       created_at: Criado em
+  #       updated_at: Atualizado em
+  #     discount:
+  #       name: Nome
+  #       description: Descrição
+  #       status: Status
+  #       value: Valor
+  #       kind: Tipo
+  #       created_at: Criado em
+  #       updated_at: Atualizado em
+  #     comission:
+  #       value: Valor
+  #       status: Status
+  #       note: Notas
+  #       created_at: Criada em
+  #       updated_at: Atualizada em
+  #     address:
+  #       country: País
+  #       city: Cidade
+  #       state: Estado
+  #       neighborhood: Bairro
+  #       street: Rua
+  #       number: Número
+  #       created_at: Criado em
+  #       updated_at: Atualizado em
 
   datetime:
     distance_in_words:
@@ -18,14 +84,88 @@ pt-BR:
         one: "1 dias"
         other: "%{count} dias"
   activerecord:
-    models:
-      client:
+     models:
+       client:
         one: Cliente
         other: Clientes
-    attributes:
-      client:
-        name: "Nome"
-        company_name: "Nome da Empresa"
+       product:
+        one: Produto
+        other: Produtos
+       user:
+        one: Usuário
+        other: Usuários
+       sale:
+        one: Venda
+        other: Vendas
+       discount:
+        one: Desconto
+        other: Descontos
+       comission:
+        one: Comissão
+        other: Comissões
+       discount:
+        one: Desconto
+        other: Descontos
+       adrress:
+        one: Endereço
+        other: Endereços
+     attributes:
+       client:
+        name: Nome
+        company_name: Nome da Empresa
+        document: Documento
+        email: E-mail
+        phone: Telefone
+        notes: Notas
+        status: Status
+       user:
+        name: Nome
+        document: Documento
+        kind: Tipo
+        status: Status
+        notes: Notas
+        email: E-mail
+        created_at: Criado em
+        updated_at: Atualizado em
+       sale:
+        sale_date:  Data da Venda
+        notes: Notas
+        created_at: Criada em
+        updated_at: Atualizada em
+       product:
+        name: Nome
+        description: Descrição
+        status: Status
+        price: Preço
+        photo: Imagem
+        created_at: Criado em
+        updated_at: Atualizado em
+       discount:
+        name: Nome
+        description: Descrição
+        status: Status
+        value: Valor
+        kind: Tipo
+        sales: Vendas
+        created_at: Criado em
+        updated_at: Atualizado em
+       comission:
+        user: Usuário
+        sale: Venda
+        value: Valor
+        status: Status
+        note: Notas
+        created_at: Criada em
+        updated_at: Atualizada em
+       address:
+        country: País
+        city: Cidade
+        state: Estado
+        neighborhood: Bairro
+        street: Rua
+        number: Número
+        created_at: Criado em
+        updated_at: Atualizado em
   views:
   admin:
     home:
@@ -51,6 +191,7 @@ pt-BR:
       navigation: "Navegação"
       log_out: "Terminar Sessão"
       ago: "atrás"
+     
     flash:
       successful: "%{name} %{action} com sucesso"
       error: "%{name} %{action} sem sucesso"

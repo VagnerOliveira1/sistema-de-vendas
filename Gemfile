@@ -6,7 +6,6 @@ ruby '2.4.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -42,6 +41,12 @@ gem 'cancancan'
 gem 'carrierwave'
 gem 'rails_admin_rollincode', '~> 1.0'
 gem 'pundit'
+gem 'bootstrap', '~> 4.0'
+gem "bootstrap_form", ">= 4.0.0.alpha1"
+ # gem 'devise-i18n'
+# gem 'devise_invitable'
+gem 'devise-bootstrap-form', '<= 0.2.0'
+
 
 
 # Gem para gerar os pdfs
@@ -53,6 +58,8 @@ gem 'gruff'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'sqlite3'
+
 end
 
 group :development do
@@ -62,6 +69,10 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :production do
+  gem 'pg'
 end
 
 
